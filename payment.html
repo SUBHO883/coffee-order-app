@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Complete Your Payment</title>
+<style>
+    body {
+    font-family: sans-serif;
+    background: #fef9c3;
+    text-align: center;
+    padding: 2rem;
+    }
+    h1 {
+    color: #333;
+    }
+    .qr {
+    margin-top: 2rem;
+    }
+    img {
+    width: 250px;
+    height: 250px;
+    }
+</style>
+</head>
+<body>
+<h1>📱 Scan to Pay</h1>
+<p>Please scan the QR code below to complete your order.</p>
+<p>Total Amount: ₹<span id="amount">0.00</span></p>
+<div class="qr">
+    <img src="My GitHub URL QR.png" alt="QR Code for UPI Payment" />
+</div>
+
+<script>
+     // Get total amount from localStorage
+    const amount = localStorage.getItem("totalAmount") || "0.00";
+    document.getElementById("amount").textContent = parseFloat(amount).toFixed(2);
+    
+    const order = JSON.parse(localStorage.getItem("coffeeOrder") || "[]");
+    if (!order.length) {
+    alert("❌ No items found. Redirecting back...");
+    window.location.href = "index.html";
+    }
+</script>
+</body>
+</html>

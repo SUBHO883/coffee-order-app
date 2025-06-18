@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Coffee Order App</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="cart-icon" id="cart-icon" data-count="0" title="View Cart">🛒</div>
+<h1>Coffee Order</h1>
+<p>Select your favorite coffee and place the order.</p>
+
+<div class="grid" id="coffee-grid"></div>
+
+<div class="order-summary hidden" id="order-summary">
+    <h2>Your Order</h2>
+    <ul class="order-list" id="order-list"></ul>
+    <div class="order-total">
+    <span>Total:</span>
+    <span id="total-price">₹0.00</span>
+    </div>
+    <button class="clear-btn" id="clear-order">Clear Order</button>
+</div>
+
+<button class="place-order" id="place-order">Place Order</button>
+
+<div id="confirm-overlay">
+    <div id="confirm-box">
+    <h2>Confirm Order</h2>
+    <p>Do you want to proceed to payment?</p>
+    <button class="confirm-btn" id="yes-proceed">Yes</button>
+    <button class="cancel-btn" id="no-cancel">No</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
