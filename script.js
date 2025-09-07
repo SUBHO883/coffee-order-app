@@ -1,6 +1,6 @@
 const coffeeItems = [
 { id: 1, name: "Espresso", price: 250, image: "images/image.png" },
-{ id: 2, name: "Cappuccino", price: 300, image: "images/Cappuccino.jpg" },
+{ id: 2, name: "Cappuccino", price: 300, image: "Cappuccino.jpg" },
 { id: 3, name: "Honey Cinnamon Latte", price: 350, image: "images/honey-cinnamon-latte-featured-image.jpg" },
 { id: 4, name: "Americano", price: 300, image: "Americano.jpg" },
 { id: 5, name: "Mocha", price: 350, image: "images/Mocha.jpg" },
@@ -151,4 +151,5 @@ document.getElementById("no-cancel").onclick = () => {
 
 renderCoffeeMenu();
 renderOrder();
+
 
